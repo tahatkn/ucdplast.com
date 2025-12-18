@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCD Recycling | About</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo"><a href="index.html"><img src="logo.png" alt="Logo"></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li class="dropdown"><a href="#">Products <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="product-flake.html">PET FLAKE</a>
+                        <a href="product-sheet.html">PET SHEET</a>
+                    </div>
+                </li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="#contact" class="nav-btn">Contact</a></li>
+            </ul>
+            <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- YENİ HEADER GÖRSELİ: Doğa/Yeşil Tema -->
+    <div class="page-header" style="background-image: url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=2000');">
+        <div class="video-overlay"></div>
+        <div class="header-content">
+            <h1>Our Mission & Vision</h1>
+            <p>Shaping a sustainable future</p>
+            <!-- BUTTON EKLENDİ -->
+            <a href="products.html" class="btn-green" style="margin-top: 20px;">Get green quote</a>
+        </div>
+    </div>
+
+    <section class="about-content">
+        <div class="container">
+            <div class="about-row">
+                <div class="about-text">
+                    <h3>Mission</h3>
+                    <p>Our mission is to transform post-consumer PET waste into high-quality rPET flakes and PET sheets, enabling manufacturers to reduce environmental impact without compromising performance or supply reliability.</p>
+                    <p><strong>Our mission is to turn waste into value — creating cleaner materials for a cleaner future.</strong></p>
+                    <small>— UCD Management</small>
+                </div>
+                <!-- MİSYON FOTOĞRAFI -->
+                <div class="about-image"><img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=1000" alt="Mission"></div>
+            </div>
+            <div class="about-row reverse">
+                <div class="about-text">
+                    <h3>Vision</h3>
+                    <p>Our vision is to become a trusted international supplier of recycled PET materials and PET sheets, setting new standards in quality, scale and circular manufacturing.</p>
+                </div>
+                <div class="about-image"><img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000" alt="Vision"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="site-footer">
+        <div class="video-bg"><video autoplay muted loop playsinline><source src="background.mp4" type="video/mp4"></video><div class="video-overlay"></div></div>
+        <div class="container footer-wrapper">
+            <div class="footer-form-section">
+                <h3>Send Message</h3>
+                <form class="contact-form" action="mailto:info@ucdplast.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn-green">Send Message</button>
+                </form>
+            </div>
+            <div class="footer-info-section">
+                <div class="info-block">
+                    <h4>Address</h4><p>KARMA DERİ O.S.B 1.CAD. N:9 Merkez/UŞAK</p>
+                    <a href="https://maps.app.goo.gl/wqvjNhWQDNJkj8RW8" target="_blank" class="btn-map"><i class="fa-solid fa-location-arrow"></i> GET DIRECTIONS</a>
+                </div>
+                <div class="info-block">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:info@ucdplast.com">info@ucdplast.com</a></p>
+                    <p><a href="tel:+902762340061">+90 (276) 234 00 61</a></p>
+                </div>
+                <div class="info-block">
+                    <h4>Social Media</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

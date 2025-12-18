@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCD Recycling | Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="UCD Plast Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="index.html#contact" class="nav-btn">Contact</a></li>
+            </ul>
+            <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="page-header" style="background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2000');">
+        <div class="video-overlay"></div>
+        <div class="container header-content">
+            <h1>Select Product Category</h1>
+            <p>Choose the material type you are interested in</p>
+        </div>
+    </div>
+
+    <!-- PRODUCT SELECTION -->
+    <section class="selection-section">
+        <div class="container">
+            <div class="selection-grid">
+                <!-- Flake Card -->
+                <a href="product-flake.html" class="selection-card">
+                    <img src="https://images.unsplash.com/photo-1605600659873-d808a13a4d2d?q=80&w=1000" alt="PET Flake">
+                    <div class="selection-overlay">
+                        <span class="selection-title">PET FLAKE</span>
+                    </div>
+                </a>
+                
+                <!-- Sheet Card -->
+                <a href="product-sheet.html" class="selection-card">
+                    <img src="productsheet.png" alt="PET Sheet">
+                    <div class="selection-overlay">
+                        <span class="selection-title">PET SHEET</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="site-footer">
+        <div class="video-bg"><video autoplay muted loop playsinline><source src="background.mp4" type="video/mp4"></video><div class="video-overlay"></div></div>
+        <div class="container footer-wrapper">
+            <div class="footer-form-section">
+                <h3>Send Message</h3>
+                <form class="contact-form" action="mailto:info@ucdplast.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn-green">Send Message</button>
+                </form>
+            </div>
+            <div class="footer-info-section">
+                <div class="info-block">
+                    <h4>Address</h4><p>KARMA DERİ O.S.B 1.CAD. N:9 Merkez/UŞAK</p>
+                    <a href="https://maps.app.goo.gl/wqvjNhWQDNJkj8RW8" target="_blank" class="btn-map"><i class="fa-solid fa-location-arrow"></i> GET DIRECTIONS</a>
+                </div>
+                <div class="info-block">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:info@ucdplast.com">info@ucdplast.com</a></p>
+                    <p><a href="tel:+902762340061">+90 (276) 234 00 61</a></p>
+                </div>
+                <div class="info-block">
+                    <h4>Social Media</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
