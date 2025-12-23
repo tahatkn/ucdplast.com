@@ -250,7 +250,8 @@ a {
     color: #8ce655; 
     font-weight: 800; 
     margin-bottom: 15px; 
-    display: inline-flex; 
+    display: flex;
+    width: fit-content;
     align-items: center; 
     gap: 10px; 
     letter-spacing: -1px; 
