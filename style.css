@@ -250,8 +250,8 @@ a {
     color: #8ce655; 
     font-weight: 800; 
     margin-bottom: 15px; 
-    display: flex;
-    width: fit-content;
+    display: flex; 
+    width: fit-content; 
     align-items: center; 
     gap: 10px; 
     letter-spacing: -1px; 
@@ -757,7 +757,7 @@ a {
     transition: 0.3s; 
 }
 
-.info-block p:hover, .info-block a:hover { 
+.info-block a:hover { 
     color: #8ce655; 
     cursor: pointer; 
 }
@@ -781,7 +781,7 @@ a {
 
 .btn-map:hover { 
     background: #8ce655; 
-    color: #000; 
+    color: #000 !important; /* Yeşil arka planda yazı siyah olsun */
     border-color: #8ce655; 
 }
 
