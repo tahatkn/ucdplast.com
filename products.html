@@ -72,10 +72,17 @@
         <div class="container footer-wrapper">
             <div class="footer-form-section">
                 <h3 data-i18n="footer_send_msg">Send Message</h3>
-                <form class="contact-form" action="mailto:info@ucdplast.com" method="post" enctype="text/plain">
+                <form class="contact-form" action="https://formsubmit.co/info@ucdplast.com" method="POST">
+                    <!-- Spam koruması için honeypot (görünmez) -->
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- E-posta Konu Başlığı -->
+                    <input type="hidden" name="_subject" value="Web Sitesinden Yeni Mesaj Var!">
+                    <!-- Gönderim sonrası Spam (Captcha) doğrulamasını kapatmak isterseniz bu satırı açın: -->
+                    <!-- <input type="hidden" name="_captcha" value="false"> -->
                     <input type="text" name="name" data-i18n-placeholder="ph_name" placeholder="Your Name" required>
                     <input type="email" name="email" data-i18n-placeholder="ph_email" placeholder="Your Email" required>
                     <textarea name="message" data-i18n-placeholder="ph_message" placeholder="Your Message" rows="4" required></textarea>
+                    
                     <button type="submit" class="btn-green" data-i18n="btn_send">Send Message</button>
                 </form>
             </div>
