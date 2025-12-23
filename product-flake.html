@@ -13,28 +13,32 @@
         <div class="container nav-container">
             <div class="logo"><a href="index.html"><img src="logo.png" alt="Logo"></a></div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="dropdown"><a href="#" class="active">Products <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li class="dropdown"><a href="#" class="active" data-i18n="nav_products">Products <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
                     <div class="dropdown-content">
                         <a href="product-flake.html">PET FLAKE</a>
                         <a href="product-sheet.html">PET SHEET</a>
                     </div>
                 </li>
-                <li><a href="certificates.html">Certificates</a></li>
-                <li><a href="#contact" class="nav-btn">Contact</a></li>
+                <li><a href="certificates.html" data-i18n="nav_certs">Certificates</a></li>
+                <li><a href="#contact" class="nav-btn" data-i18n="nav_contact">Contact</a></li>
+                <!-- DİL SEÇİCİ -->
+                <div class="lang-selector">
+                    <img src="https://flagcdn.com/w40/tr.png" onclick="changeLanguage('tr')" alt="Türkçe" title="Türkçe">
+                    <img src="https://flagcdn.com/w40/gb.png" onclick="changeLanguage('en')" alt="English" title="English">
+                </div>
             </ul>
-            <div class="lang-switch">
-                <a href="product-flake.html" class="active"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
-                <a href="product-flake-tr.html"><img src="https://flagcdn.com/w40/tr.png" alt="TR"></a>
-            </div>
             <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
         </div>
     </nav>
 
     <div class="page-header" style="height: 300px; background-image: url('https://images.unsplash.com/photo-1605600659873-d808a13a4d2d?q=80&w=2000');">
         <div class="video-overlay"></div>
-        <div class="header-content"><h1>PET Flake</h1><p>High purity recycled flakes</p></div>
+        <div class="header-content">
+            <h1 data-i18n="pf_header_title">PET Flake</h1>
+            <p data-i18n="pf_header_desc">High purity recycled flakes</p>
+        </div>
     </div>
 
     <section class="product-detail-section">
@@ -51,24 +55,24 @@
         <div class="video-bg"><video autoplay muted loop playsinline><source src="background.mp4" type="video/mp4"></video><div class="video-overlay"></div></div>
         <div class="container footer-wrapper">
             <div class="footer-form-section">
-                <h3>Send Message</h3>
+                <h3 data-i18n="footer_send_msg">Send Message</h3>
                 <form class="contact-form" action="mailto:info@ucdplast.com" method="post" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                    <button type="submit" class="btn-green">Send Message</button>
+                    <input type="text" name="name" data-i18n-placeholder="ph_name" placeholder="Your Name" required>
+                    <input type="email" name="email" data-i18n-placeholder="ph_email" placeholder="Your Email" required>
+                    <textarea name="message" data-i18n-placeholder="ph_message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn-green" data-i18n="btn_send">Send Message</button>
                 </form>
             </div>
             <div class="footer-info-section">
                 <div class="info-block">
-                    <h4>Address</h4><p>KARMA DERİ O.S.B 1.CAD. N:9 Merkez/UŞAK</p>
-                    <a href="https://maps.app.goo.gl/wqvjNhWQDNJkj8RW8" target="_blank" class="btn-map"><i class="fa-solid fa-location-arrow"></i> GET DIRECTIONS</a>
+                    <h4 data-i18n="footer_addr">Address</h4><p>KARMA DERİ O.S.B 1.CAD. N:9 Merkez/UŞAK</p>
+                    <a href="https://maps.app.goo.gl/wqvjNhWQDNJkj8RW8" target="_blank" class="btn-map"><i class="fa-solid fa-location-arrow"></i> <span data-i18n="btn_map">GET DIRECTIONS</span></a>
                 </div>
                 <div class="info-block">
-                    <h4>Contact</h4><p><a href="mailto:info@ucdplast.com">info@ucdplast.com</a></p><p><a href="tel:+902762340061">+90 (276) 234 00 61</a></p>
+                    <h4 data-i18n="footer_contact">Contact</h4><p><a href="mailto:info@ucdplast.com">info@ucdplast.com</a></p><p><a href="tel:+902762340061">+90 (276) 234 00 61</a></p>
                 </div>
                 <div class="info-block">
-                    <h4>Social Media</h4>
+                    <h4 data-i18n="footer_social">Social Media</h4>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -78,5 +82,72 @@
             </div>
         </div>
     </footer>
+
+    <!-- LANGUAGE SCRIPT -->
+    <script>
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_about: "About",
+                nav_products: "Products <i class='fa-solid fa-chevron-down' style='font-size: 10px;'></i>",
+                nav_certs: "Certificates",
+                nav_contact: "Contact",
+                pf_header_title: "PET Flake",
+                pf_header_desc: "High purity recycled flakes",
+                footer_send_msg: "Send Message",
+                footer_addr: "Address",
+                footer_contact: "Contact",
+                footer_social: "Social Media",
+                btn_send: "Send Message",
+                btn_map: "GET DIRECTIONS",
+                ph_name: "Your Name",
+                ph_email: "Your Email",
+                ph_message: "Your Message"
+            },
+            tr: {
+                nav_home: "Ana Sayfa",
+                nav_about: "Hakkımızda",
+                nav_products: "Ürünler <i class='fa-solid fa-chevron-down' style='font-size: 10px;'></i>",
+                nav_certs: "Sertifikalar",
+                nav_contact: "İletişim",
+                pf_header_title: "PET Çapak",
+                pf_header_desc: "Yüksek saflıkta geri dönüştürülmüş çapaklar",
+                footer_send_msg: "Mesaj Gönder",
+                footer_addr: "Adres",
+                footer_contact: "İletişim",
+                footer_social: "Sosyal Medya",
+                btn_send: "Mesajı Gönder",
+                btn_map: "YOL TARİFİ AL",
+                ph_name: "Adınız",
+                ph_email: "E-posta Adresiniz",
+                ph_message: "Mesajınız"
+            }
+        };
+
+        function changeLanguage(lang) {
+            localStorage.setItem('selectedLang', lang);
+            updatePageContent(lang);
+        }
+
+        function updatePageContent(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[lang][key]) {
+                    element.setAttribute('placeholder', translations[lang][key]);
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLang') || 'en';
+            updatePageContent(savedLang);
+        });
+    </script>
 </body>
 </html>

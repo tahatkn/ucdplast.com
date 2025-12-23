@@ -7,27 +7,34 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .lang-selector { display: flex; gap: 10px; margin-left: 20px; align-items: center; }
+        .lang-selector img { width: 24px; height: auto; cursor: pointer; transition: transform 0.2s; border-radius: 4px; border: 1px solid #eee; }
+        .lang-selector img:hover { transform: scale(1.1); }
+        @media (max-width: 768px) { .lang-selector { margin-left: 0; margin-top: 10px; } }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo"><a href="index.html"><img src="logo.png" alt="Logo"></a></div>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="dropdown"><a href="#">Products <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+                <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li class="dropdown"><a href="#" data-i18n="nav_products">Products <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
                     <div class="dropdown-content">
                         <a href="product-flake.html">PET FLAKE</a>
                         <a href="product-sheet.html">PET SHEET</a>
                     </div>
                 </li>
-                <li><a href="certificates.html">Certificates</a></li>
-                <li><a href="#contact" class="nav-btn">Contact</a></li>
+                <li><a href="certificates.html" data-i18n="nav_certs">Certificates</a></li>
+                <li><a href="#contact" class="nav-btn" data-i18n="nav_contact">Contact</a></li>
+                <!-- DİL SEÇİCİ -->
+                <div class="lang-selector">
+                    <img src="https://flagcdn.com/w40/tr.png" onclick="changeLanguage('tr')" alt="Türkçe" title="Türkçe">
+                    <img src="https://flagcdn.com/w40/gb.png" onclick="changeLanguage('en')" alt="English" title="English">
+                </div>
             </ul>
-            <div class="lang-switch">
-                <a href="index.html" class="active"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
-                <a href="index-tr.html"><img src="https://flagcdn.com/w40/tr.png" alt="TR"></a>
-            </div>
             <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
         </div>
     </nav>
@@ -35,9 +42,9 @@
     <header class="hero-section">
         <div class="video-bg"><video autoplay muted loop playsinline><source src="background.mp4" type="video/mp4"></video><div class="video-overlay"></div></div>
         <div class="container hero-content">
-            <h1>High-Quality rPET Flakes & PET Sheets for Global Manufacturers</h1>
-            <p>We produce high-purity rPET flakes and PET sheets, serving packaging, thermoforming and industrial manufacturers with consistent quality and export-ready supply.</p>
-            <a href="products.html" class="btn-green">Get green quote</a>
+            <h1 data-i18n="hero_title">High-Quality rPET Flakes & PET Sheets for Global Manufacturers</h1>
+            <p data-i18n="hero_text">We produce high-purity rPET flakes and PET sheets, serving packaging, thermoforming and industrial manufacturers with consistent quality and export-ready supply.</p>
+            <a href="products.html" class="btn-green" data-i18n="btn_quote">Get green quote</a>
         </div>
     </header>
 
@@ -45,17 +52,20 @@
         <div class="container">
             <div class="driving-grid">
                 <div class="driving-text">
+                    <!-- LOGO ÜSTTE -->
                     <div class="purecycle-brand"><i class="fa-solid fa-arrows-spin"></i> purecycle</div>
-                    <span class="tag">DRIVING CHANGE</span>
-                    <h2>At UCD Recycling, we transform post-consumer PET bottles into high-purity rPET flakes and PET sheets, with a production capacity of up to 1,300 tons/month of rPET flakes and 400 tons/month of PET sheets, supporting circular manufacturing across packaging, thermoforming and industrial applications worldwide.</h2>
-                    <a href="about.html" class="btn-green">More about us</a>
+                    <!-- TAG ALTTA -->
+                    <span class="tag" data-i18n="tag_driving">DRIVING CHANGE</span>
+                    
+                    <h2 data-i18n="driving_main_text">At UCD Recycling, we transform post-consumer PET bottles into high-purity rPET flakes and PET sheets, with a production capacity of up to 1,300 tons/month of rPET flakes and 400 tons/month of PET sheets, supporting circular manufacturing across packaging, thermoforming and industrial applications worldwide.</h2>
+                    <a href="about.html" class="btn-green" data-i18n="btn_more_about">More about us</a>
                 </div>
                 <div class="bottle-image-wrapper">
                     <div class="floating-stat">
                         <div class="stat-icon"><i class="fa-solid fa-industry"></i></div>
                         <div class="stat-info">
                             <span id="liveCounter">1,299,990</span>
-                            <p>Monthly Processing (Tons)</p>
+                            <p data-i18n="stat_processing">Monthly Processing (Tons)</p>
                         </div>
                     </div>
                     <img src="bottle-explode.png" alt="Bottle Splash">
@@ -68,14 +78,15 @@
         <div class="container">
             <div class="why-us-grid">
                 <div class="why-content">
-                    <span class="tag">WHY CHOOSE US</span>
-                    <h2 class="section-title">Why UCD Recycling is the smarter choice</h2>
+                    <span class="tag" data-i18n="tag_why">WHY CHOOSE US</span>
+                    <h2 class="section-title" data-i18n="why_title">Why UCD Recycling is the smarter choice</h2>
                     <div class="feature-list">
-                        <div class="feature-item"><div class="dot"></div><div><h3>Innovative green technology</h3><p>We operate state-of-the-art sorting, washing, and drying lines that ensure high-purity PET flakes with consistent quality and minimal contamination.</p></div></div>
-                        <div class="feature-item"><div class="dot"></div><div><h3>Commitment to Circular Production</h3><p>Our processes turn post-consumer PET waste into reusable raw materials, supporting a circular economy and reducing environmental impact at scale.</p></div></div>
-                         <div class="feature-item"><div class="dot"></div><div><h3>Reliable & Export-Ready Supply</h3><p>We provide stable production volumes, bigbag packaging, and international-grade quality standards—ensuring smooth, dependable delivery for manufacturers worldwide.</p></div></div>
+                        <div class="feature-item"><div class="dot"></div><div><h3 data-i18n="feat1_title">Innovative green technology</h3><p data-i18n="feat1_desc">We operate state-of-the-art sorting, washing, and drying lines that ensure high-purity PET flakes with consistent quality and minimal contamination.</p></div></div>
+                        <div class="feature-item"><div class="dot"></div><div><h3 data-i18n="feat2_title">Commitment to Circular Production</h3><p data-i18n="feat2_desc">Our processes turn post-consumer PET waste into reusable raw materials, supporting a circular economy and reducing environmental impact at scale.</p></div></div>
+                         <div class="feature-item"><div class="dot"></div><div><h3 data-i18n="feat3_title">Reliable & Export-Ready Supply</h3><p data-i18n="feat3_desc">We provide stable production volumes, bigbag packaging, and international-grade quality standards—ensuring smooth, dependable delivery for manufacturers worldwide.</p></div></div>
                     </div>
                 </div>
+                <!-- RESİM AŞAĞI KAYDIRILDI -->
                 <div class="why-image" style="margin-top: 100px;"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000" alt="Landscape"></div>
             </div>
         </div>
@@ -85,26 +96,26 @@
         <div class="video-bg"><video autoplay muted loop playsinline><source src="background.mp4" type="video/mp4"></video><div class="video-overlay"></div></div>
         <div class="container footer-wrapper">
             <div class="footer-form-section">
-                <h3>Send Message</h3>
+                <h3 data-i18n="footer_send_msg">Send Message</h3>
                 <form class="contact-form" action="mailto:info@ucdplast.com" method="post" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                    <button type="submit" class="btn-green">Send Message</button>
+                    <input type="text" name="name" data-i18n-placeholder="ph_name" placeholder="Your Name" required>
+                    <input type="email" name="email" data-i18n-placeholder="ph_email" placeholder="Your Email" required>
+                    <textarea name="message" data-i18n-placeholder="ph_message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn-green" data-i18n="btn_send">Send Message</button>
                 </form>
             </div>
             <div class="footer-info-section">
                 <div class="info-block">
-                    <h4>Address</h4><p>KARMA DERİ O.S.B 1.CAD. N:9 Merkez/UŞAK</p>
-                    <a href="https://maps.app.goo.gl/wqvjNhWQDNJkj8RW8" target="_blank" class="btn-map"><i class="fa-solid fa-location-arrow"></i> GET DIRECTIONS</a>
+                    <h4 data-i18n="footer_addr">Address</h4><p>KARMA DERİ O.S.B 1.CAD. N:9 Merkez/UŞAK</p>
+                    <a href="https://maps.app.goo.gl/wqvjNhWQDNJkj8RW8" target="_blank" class="btn-map"><i class="fa-solid fa-location-arrow"></i> <span data-i18n="btn_map">GET DIRECTIONS</span></a>
                 </div>
                 <div class="info-block">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer_contact">Contact</h4>
                     <p><a href="mailto:info@ucdplast.com">info@ucdplast.com</a></p>
                     <p><a href="tel:+902762340061">+90 (276) 234 00 61</a></p>
                 </div>
                 <div class="info-block">
-                    <h4>Social Media</h4>
+                    <h4 data-i18n="footer_social">Social Media</h4>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -116,6 +127,7 @@
     </footer>
 
     <script>
+        // SAYAÇ SCRIPT
         const liveCounter = document.getElementById('liveCounter');
         let currentValue = 1299000;
         const increasePerMs = (722.22 / 60000); 
@@ -123,6 +135,97 @@
             currentValue += (increasePerMs * 100); 
             liveCounter.innerText = Math.floor(currentValue).toLocaleString();
         }, 100); 
+
+        // ÇEVİRİ SCRIPT
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_about: "About",
+                nav_products: "Products <i class='fa-solid fa-chevron-down' style='font-size: 10px;'></i>",
+                nav_certs: "Certificates",
+                nav_contact: "Contact",
+                hero_title: "High-Quality rPET Flakes & PET Sheets for Global Manufacturers",
+                hero_text: "We produce high-purity rPET flakes and PET sheets, serving packaging, thermoforming and industrial manufacturers with consistent quality and export-ready supply.",
+                btn_quote: "Get green quote",
+                tag_driving: "DRIVING CHANGE",
+                driving_main_text: "At UCD Recycling, we transform post-consumer PET bottles into high-purity rPET flakes and PET sheets, with a production capacity of up to 1,300 tons/month of rPET flakes and 400 tons/month of PET sheets, supporting circular manufacturing across packaging, thermoforming and industrial applications worldwide.",
+                btn_more_about: "More about us",
+                stat_processing: "Monthly Processing (Tons)",
+                tag_why: "WHY CHOOSE US",
+                why_title: "Why UCD Recycling is the smarter choice",
+                feat1_title: "Innovative green technology",
+                feat1_desc: "We operate state-of-the-art sorting, washing, and drying lines that ensure high-purity PET flakes with consistent quality and minimal contamination.",
+                feat2_title: "Commitment to Circular Production",
+                feat2_desc: "Our processes turn post-consumer PET waste into reusable raw materials, supporting a circular economy and reducing environmental impact at scale.",
+                feat3_title: "Reliable & Export-Ready Supply",
+                feat3_desc: "We provide stable production volumes, bigbag packaging, and international-grade quality standards—ensuring smooth, dependable delivery for manufacturers worldwide.",
+                footer_send_msg: "Send Message",
+                footer_addr: "Address",
+                footer_contact: "Contact",
+                footer_social: "Social Media",
+                btn_send: "Send Message",
+                btn_map: "GET DIRECTIONS",
+                ph_name: "Your Name",
+                ph_email: "Your Email",
+                ph_message: "Your Message"
+            },
+            tr: {
+                nav_home: "Ana Sayfa",
+                nav_about: "Hakkımızda",
+                nav_products: "Ürünler <i class='fa-solid fa-chevron-down' style='font-size: 10px;'></i>",
+                nav_certs: "Sertifikalar",
+                nav_contact: "İletişim",
+                hero_title: "Küresel Üreticiler için Yüksek Kaliteli rPET Çapak ve PET Levha",
+                hero_text: "Ambalaj, termoform ve endüstriyel üreticilere tutarlı kalite ve ihracata hazır tedarik ile yüksek saflıkta rPET çapak ve PET levha üretiyoruz.",
+                btn_quote: "Yeşil Teklif Al",
+                tag_driving: "DEĞİŞİME ÖNCÜLÜK",
+                driving_main_text: "UCD Geri Dönüşüm olarak, tüketici sonrası PET şişeleri, aylık 1.300 ton rPET çapak ve 400 ton PET levha üretim kapasitesiyle yüksek saflıkta hammaddelere dönüştürüyor; dünya genelinde ambalaj, termoform ve endüstriyel uygulamalarda döngüsel üretimi destekliyoruz.",
+                btn_more_about: "Hakkımızda daha fazla",
+                stat_processing: "Aylık İşleme (Ton)",
+                tag_why: "NEDEN BİZ",
+                why_title: "Neden UCD Geri Dönüşüm akıllıca bir seçim?",
+                feat1_title: "Yenilikçi yeşil teknoloji",
+                feat1_desc: "Tutarlı kalite ve minimum kirlilik ile yüksek saflıkta PET çapakları sağlayan son teknoloji ayırma, yıkama ve kurutma hatlarını işletiyoruz.",
+                feat2_title: "Döngüsel Üretime Bağlılık",
+                feat2_desc: "Süreçlerimiz, tüketici sonrası PET atıklarını yeniden kullanılabilir hammaddelere dönüştürerek döngüsel ekonomiyi destekler ve çevresel etkiyi ölçekli olarak azaltır.",
+                feat3_title: "Güvenilir & İhracata Hazır Tedarik",
+                feat3_desc: "İstikrarlı üretim hacimleri, bigbag paketleme ve uluslararası kalite standartları sunarak dünya çapındaki üreticiler için sorunsuz ve güvenilir teslimat sağlıyoruz.",
+                footer_send_msg: "Mesaj Gönder",
+                footer_addr: "Adres",
+                footer_contact: "İletişim",
+                footer_social: "Sosyal Medya",
+                btn_send: "Mesajı Gönder",
+                btn_map: "YOL TARİFİ AL",
+                ph_name: "Adınız",
+                ph_email: "E-posta Adresiniz",
+                ph_message: "Mesajınız"
+            }
+        };
+
+        function changeLanguage(lang) {
+            localStorage.setItem('selectedLang', lang);
+            updatePageContent(lang);
+        }
+
+        function updatePageContent(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[lang][key]) {
+                    element.setAttribute('placeholder', translations[lang][key]);
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLang') || 'en';
+            updatePageContent(savedLang);
+        });
     </script>
 </body>
 </html>

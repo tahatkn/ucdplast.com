@@ -7,88 +7,103 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .lang-selector { display: flex; gap: 10px; margin-left: 20px; align-items: center; }
+        .lang-selector img { width: 24px; height: auto; cursor: pointer; transition: transform 0.2s; border-radius: 4px; border: 1px solid #eee; }
+        .lang-selector img:hover { transform: scale(1.1); }
+        @media (max-width: 768px) { .lang-selector { margin-left: 0; margin-top: 10px; } }
+    </style>
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
                 <a href="index.html"><img src="logo.png" alt="UCD Plast Logo"></a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
                 <li class="dropdown">
-                    <a href="#">Products <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+                    <a href="#" data-i18n="nav_products">Products <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
                     <div class="dropdown-content">
                         <a href="product-clear.html">PET FLAKE CLEAR & LIGHT BLUE</a>
                         <a href="product-green.html">PET FLAKE GREEN</a>
                         <a href="product-mixed.html">PET FLAKE MIXED</a>
                     </div>
                 </li>
-                <li><a href="certificates.html" class="active">Certificates</a></li>
-                <li><a href="#contact" class="nav-btn">Contact</a></li>
+                <li><a href="certificates.html" class="active" data-i18n="nav_certs">Certificates</a></li>
+                <li><a href="#contact" class="nav-btn" data-i18n="nav_contact">Contact</a></li>
+                <!-- DİL SEÇİCİ -->
+                <div class="lang-selector">
+                    <img src="https://flagcdn.com/w40/tr.png" onclick="changeLanguage('tr')" alt="Türkçe" title="Türkçe">
+                    <img src="https://flagcdn.com/w40/gb.png" onclick="changeLanguage('en')" alt="English" title="English">
+                </div>
             </ul>
-            <div class="lang-switch">
-                <a href="certificates.html" class="active"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
-                <a href="certificates-tr.html"><img src="https://flagcdn.com/w40/tr.png" alt="TR"></a>
-            </div>
             <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
         </div>
     </nav>
 
+    <!-- HEADER -->
     <div class="page-header" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000');">
         <div class="video-overlay"></div>
         <div class="header-content">
-            <h1>Certificates & Documents</h1>
-            <p>Our commitment to quality standards is certified by international and national authorities.</p>
+            <h1 data-i18n="cert_header_title">Certificates & Documents</h1>
+            <p data-i18n="cert_header_desc">Our commitment to quality standards is certified by international and national authorities.</p>
         </div>
     </div>
 
+    <!-- CERTIFICATES LIST -->
     <section class="certificates-section">
         <div class="container">
             <div class="cert-intro">
-                <h2>Our Quality Standards</h2>
-                <p>We adhere to the highest global standards in recycling, safety, and environmental responsibility.</p>
+                <h2 data-i18n="cert_intro_title">Our Quality Standards</h2>
+                <p data-i18n="cert_intro_text">We adhere to the highest global standards in recycling, safety, and environmental responsibility.</p>
             </div>
 
             <div class="cert-grid">
+                <!-- 1. RECYCLASS -->
                 <div class="cert-item">
                     <div class="cert-img-wrapper">
                         <img src="cert-1.png" alt="RecyClass Certificate">
                         <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                     </div>
-                    <h3>RecyClass Recycling Process</h3>
-                    <p>Certified traceability of recycled plastics and conformity assessment for recycling processes.</p>
+                    <h3 data-i18n="c1_title">RecyClass Recycling Process</h3>
+                    <p data-i18n="c1_desc">Certified traceability of recycled plastics and conformity assessment for recycling processes.</p>
                 </div>
+                <!-- 2. ATIK İTHALATÇISI -->
                 <div class="cert-item">
                     <div class="cert-img-wrapper">
                         <img src="cert-2.png" alt="Waste Importer Certificate">
                         <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                     </div>
-                    <h3>Waste Importer Registration</h3>
-                    <p>Official authorization for waste importation issued by the Ministry of Environment, Urbanization and Climate Change.</p>
+                    <h3 data-i18n="c2_title">Waste Importer Registration</h3>
+                    <p data-i18n="c2_desc">Official authorization for waste importation issued by the Ministry of Environment, Urbanization and Climate Change.</p>
                 </div>
+                <!-- 3. SANAYİ SİCİL -->
                 <div class="cert-item">
                     <div class="cert-img-wrapper">
                         <img src="cert-3.png" alt="Industrial Registry Certificate">
                         <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                     </div>
-                    <h3>Industrial Registry Certificate</h3>
-                    <p>Official manufacturing registration issued by the Republic of Turkey Ministry of Industry and Technology.</p>
+                    <h3 data-i18n="c3_title">Industrial Registry Certificate</h3>
+                    <p data-i18n="c3_desc">Official manufacturing registration issued by the Republic of Turkey Ministry of Industry and Technology.</p>
                 </div>
+                <!-- 4. GEÇİCİ FAALİYET -->
                 <div class="cert-item">
                     <div class="cert-img-wrapper">
                         <img src="cert-4.png" alt="Temporary Activity Certificate">
                         <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                     </div>
-                    <h3>Temporary Activity Certificate</h3>
-                    <p>Environmental permit regarding non-hazardous waste recovery and air emission.</p>
+                    <h3 data-i18n="c4_title">Temporary Activity Certificate</h3>
+                    <p data-i18n="c4_desc">Environmental permit regarding non-hazardous waste recovery and air emission.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer id="contact" class="site-footer">
         <div class="video-bg">
             <video autoplay muted loop playsinline>
@@ -98,29 +113,29 @@
         </div>
         <div class="container footer-wrapper">
             <div class="footer-form-section">
-                <h3>Send Message</h3>
+                <h3 data-i18n="footer_send_msg">Send Message</h3>
                 <form class="contact-form" action="mailto:info@ucdplast.com" method="post" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                    <button type="submit" class="btn-green">Send Message</button>
+                    <input type="text" name="name" data-i18n-placeholder="ph_name" placeholder="Your Name" required>
+                    <input type="email" name="email" data-i18n-placeholder="ph_email" placeholder="Your Email" required>
+                    <textarea name="message" data-i18n-placeholder="ph_message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn-green" data-i18n="btn_send">Send Message</button>
                 </form>
             </div>
             <div class="footer-info-section">
                 <div class="info-block">
-                    <h4>Address</h4>
+                    <h4 data-i18n="footer_addr">Address</h4>
                     <p>KARMA DERİ O.S.B 1.CAD. N:9 Merkez/UŞAK</p>
                     <a href="https://maps.app.goo.gl/wqvjNhWQDNJkj8RW8" target="_blank" class="btn-map">
-                        <i class="fa-solid fa-location-arrow"></i>&nbsp; GET DIRECTIONS
+                        <i class="fa-solid fa-location-arrow"></i>&nbsp; <span data-i18n="btn_map">GET DIRECTIONS</span>
                     </a>
                 </div>
                 <div class="info-block">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer_contact">Contact</h4>
                     <p><a href="mailto:info@ucdplast.com">info@ucdplast.com</a></p>
                     <p><a href="tel:+902762340061">+90 (276) 234 00 61</a></p>
                 </div>
                 <div class="info-block">
-                    <h4>Social Media</h4>
+                    <h4 data-i18n="footer_social">Social Media</h4>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/ucdgeridonusum/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -130,5 +145,92 @@
             </div>
         </div>
     </footer>
+
+    <!-- LANGUAGE SCRIPT -->
+    <script>
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_about: "About",
+                nav_products: "Products <i class='fa-solid fa-chevron-down' style='font-size: 10px;'></i>",
+                nav_certs: "Certificates",
+                nav_contact: "Contact",
+                cert_header_title: "Certificates & Documents",
+                cert_header_desc: "Our commitment to quality standards is certified by international and national authorities.",
+                cert_intro_title: "Our Quality Standards",
+                cert_intro_text: "We adhere to the highest global standards in recycling, safety, and environmental responsibility.",
+                c1_title: "RecyClass Recycling Process",
+                c1_desc: "Certified traceability of recycled plastics and conformity assessment for recycling processes.",
+                c2_title: "Waste Importer Registration",
+                c2_desc: "Official authorization for waste importation issued by the Ministry of Environment, Urbanization and Climate Change.",
+                c3_title: "Industrial Registry Certificate",
+                c3_desc: "Official manufacturing registration issued by the Republic of Turkey Ministry of Industry and Technology.",
+                c4_title: "Temporary Activity Certificate",
+                c4_desc: "Environmental permit regarding non-hazardous waste recovery and air emission.",
+                footer_send_msg: "Send Message",
+                footer_addr: "Address",
+                footer_contact: "Contact",
+                footer_social: "Social Media",
+                btn_send: "Send Message",
+                btn_map: "GET DIRECTIONS",
+                ph_name: "Your Name",
+                ph_email: "Your Email",
+                ph_message: "Your Message"
+            },
+            tr: {
+                nav_home: "Ana Sayfa",
+                nav_about: "Hakkımızda",
+                nav_products: "Ürünler <i class='fa-solid fa-chevron-down' style='font-size: 10px;'></i>",
+                nav_certs: "Sertifikalar",
+                nav_contact: "İletişim",
+                cert_header_title: "Sertifikalar & Belgeler",
+                cert_header_desc: "Kalite standartlarına olan bağlılığımız uluslararası ve ulusal otoritelerce tescillenmiştir.",
+                cert_intro_title: "Kalite Standartlarımız",
+                cert_intro_text: "Geri dönüşüm, güvenlik ve çevresel sorumluluk konularında en yüksek küresel standartlara bağlıyız.",
+                c1_title: "RecyClass Geri Dönüşüm Süreci",
+                c1_desc: "Geri dönüştürülmüş plastiklerin izlenebilirliği ve geri dönüşüm süreçleri için uygunluk değerlendirmesi.",
+                c2_title: "Atık İthalatçısı Kayıt Belgesi",
+                c2_desc: "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı tarafından verilen resmi atık ithalatı yetki belgesi.",
+                c3_title: "Sanayi Sicil Belgesi",
+                c3_desc: "T.C. Sanayi ve Teknoloji Bakanlığı tarafından verilen resmi üretim kayıt belgesi.",
+                c4_title: "Geçici Faaliyet Belgesi",
+                c4_desc: "Tehlikesiz atık geri kazanımı ve hava emisyonu konulu çevre izin belgesi.",
+                footer_send_msg: "Mesaj Gönder",
+                footer_addr: "Adres",
+                footer_contact: "İletişim",
+                footer_social: "Sosyal Medya",
+                btn_send: "Mesajı Gönder",
+                btn_map: "YOL TARİFİ AL",
+                ph_name: "Adınız",
+                ph_email: "E-posta Adresiniz",
+                ph_message: "Mesajınız"
+            }
+        };
+
+        function changeLanguage(lang) {
+            localStorage.setItem('selectedLang', lang);
+            updatePageContent(lang);
+        }
+
+        function updatePageContent(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[lang][key]) {
+                    element.setAttribute('placeholder', translations[lang][key]);
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLang') || 'en';
+            updatePageContent(savedLang);
+        });
+    </script>
 </body>
 </html>
