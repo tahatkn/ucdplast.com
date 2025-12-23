@@ -7,12 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .lang-selector { display: flex; gap: 10px; margin-left: 20px; align-items: center; }
-        .lang-selector img { width: 24px; height: auto; cursor: pointer; transition: transform 0.2s; border-radius: 4px; border: 1px solid #eee; }
-        .lang-selector img:hover { transform: scale(1.1); }
-        @media (max-width: 768px) { .lang-selector { margin-left: 0; margin-top: 10px; } }
-    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -23,8 +17,8 @@
                 <li><a href="about.html" data-i18n="nav_about">About</a></li>
                 <li class="dropdown"><a href="#" data-i18n="nav_products">Products <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
                     <div class="dropdown-content">
-                        <a href="product-flake.html">PET FLAKE</a>
-                        <a href="product-sheet.html">PET SHEET</a>
+                        <a href="product-flake.html" data-i18n="nav_flake">PET FLAKE</a>
+                        <a href="product-sheet.html" data-i18n="nav_sheet">PET SHEET</a>
                     </div>
                 </li>
                 <li><a href="certificates.html" data-i18n="nav_certs">Certificates</a></li>
@@ -52,11 +46,8 @@
         <div class="container">
             <div class="driving-grid">
                 <div class="driving-text">
-                    <!-- LOGO ÜSTTE -->
                     <div class="purecycle-brand"><i class="fa-solid fa-arrows-spin"></i> purecycle</div>
-                    <!-- TAG ALTTA -->
                     <span class="tag" data-i18n="tag_driving">DRIVING CHANGE</span>
-                    
                     <h2 data-i18n="driving_main_text">At UCD Recycling, we transform post-consumer PET bottles into high-purity rPET flakes and PET sheets, with a production capacity of up to 1,300 tons/month of rPET flakes and 400 tons/month of PET sheets, supporting circular manufacturing across packaging, thermoforming and industrial applications worldwide.</h2>
                     <a href="about.html" class="btn-green" data-i18n="btn_more_about">More about us</a>
                 </div>
@@ -86,7 +77,6 @@
                          <div class="feature-item"><div class="dot"></div><div><h3 data-i18n="feat3_title">Reliable & Export-Ready Supply</h3><p data-i18n="feat3_desc">We provide stable production volumes, bigbag packaging, and international-grade quality standards—ensuring smooth, dependable delivery for manufacturers worldwide.</p></div></div>
                     </div>
                 </div>
-                <!-- RESİM AŞAĞI KAYDIRILDI -->
                 <div class="why-image" style="margin-top: 100px;"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000" alt="Landscape"></div>
             </div>
         </div>
@@ -142,6 +132,8 @@
                 nav_home: "Home",
                 nav_about: "About",
                 nav_products: "Products <i class='fa-solid fa-chevron-down' style='font-size: 10px;'></i>",
+                nav_flake: "PET FLAKE",
+                nav_sheet: "PET SHEET",
                 nav_certs: "Certificates",
                 nav_contact: "Contact",
                 hero_title: "High-Quality rPET Flakes & PET Sheets for Global Manufacturers",
@@ -173,6 +165,8 @@
                 nav_home: "Ana Sayfa",
                 nav_about: "Hakkımızda",
                 nav_products: "Ürünler <i class='fa-solid fa-chevron-down' style='font-size: 10px;'></i>",
+                nav_flake: "PET ÇAPAK",
+                nav_sheet: "PET LEVHA",
                 nav_certs: "Sertifikalar",
                 nav_contact: "İletişim",
                 hero_title: "Küresel Üreticiler için Yüksek Kaliteli rPET Çapak ve PET Levha",
