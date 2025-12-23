@@ -107,7 +107,7 @@ a { text-decoration: none; }
 .about-text p { font-size: 1.15rem; color: #555; margin-bottom: 20px; line-height: 1.8; }
 .about-image img { width: 100%; height: 400px; object-fit: cover; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 
-/* --- PRODUCT SELECTION PAGE (NEW) --- */
+/* --- PRODUCT SELECTION PAGE --- */
 .selection-section { padding: 40px 0 100px 0; }
 .selection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .selection-card { position: relative; height: 500px; border-radius: 40px; overflow: hidden; display: block; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
@@ -123,6 +123,14 @@ a { text-decoration: none; }
 .product-grid-triple { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; align-items: end; }
 .product-grid-triple img { width: 100%; height: auto; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.15)); transition: 0.3s; }
 .product-grid-triple img:hover { transform: scale(1.05); }
+
+/* --- YENİ EKLENEN 4'LÜ GRID (QUAD) --- */
+.product-grid-quad { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: stretch; }
+@media (min-width: 992px) {
+    .product-grid-quad { grid-template-columns: repeat(4, 1fr); }
+}
+.product-grid-quad img { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: 0.3s; object-fit: cover; aspect-ratio: 1 / 1; }
+.product-grid-quad img:hover { transform: scale(1.03); box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
 
 /* --- FOOTER --- */
 .site-footer { padding: 100px 0 60px 0; color: white; position: relative; width: 100%; overflow: hidden; }
@@ -148,6 +156,7 @@ a { text-decoration: none; }
     .stat-info span { font-size: 2.5rem; }
     .stat-icon { width: 60px; height: 60px; font-size: 1.8rem; }
     .product-grid-triple { grid-template-columns: 1fr; }
+    .product-grid-quad { grid-template-columns: 1fr; /* Mobil'de 4'ü alt alta olsun isterseniz 1fr, 2'şerli olsun isterseniz 1fr 1fr */ }
     .selection-grid { grid-template-columns: 1fr; }
     .lang-selector { margin-left: 0; margin-top: 10px; }
 }
