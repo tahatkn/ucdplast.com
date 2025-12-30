@@ -408,8 +408,22 @@ a {
 
 .cert-grid { 
     display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-template-columns: 1fr; /* Mobil: 1 Sütun */
     gap: 40px; 
+}
+
+/* Tablet: 2 Sütun */
+@media (min-width: 768px) {
+    .cert-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* Masaüstü: 3 Sütun (3-3 düzeni için) */
+@media (min-width: 1024px) {
+    .cert-grid { 
+        grid-template-columns: repeat(3, 1fr); 
+    }
 }
 
 .cert-item { 
@@ -781,7 +795,7 @@ a {
 
 .btn-map:hover { 
     background: #8ce655; 
-    color: #000 !important; /* Yeşil arka planda yazı siyah olsun */
+    color: #000 !important; 
     border-color: #8ce655; 
 }
 

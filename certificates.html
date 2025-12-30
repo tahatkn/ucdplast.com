@@ -28,7 +28,6 @@
                 </li>
                 <li><a href="certificates.html" class="active" data-i18n="nav_certs">Certificates</a></li>
                 <li><a href="#contact" class="nav-btn" data-i18n="nav_contact">Contact</a></li>
-                <!-- DİL SEÇİCİ -->
                 <div class="lang-selector">
                     <img src="https://flagcdn.com/w40/tr.png" onclick="changeLanguage('tr')" alt="Türkçe" title="Türkçe">
                     <img src="https://flagcdn.com/w40/gb.png" onclick="changeLanguage('en')" alt="English" title="English">
@@ -56,7 +55,8 @@
             </div>
 
             <div class="cert-grid">
-                <!-- 1. RECYCLASS -->
+                
+                <!-- 1. RECYCLASS (Sol Üst) -->
                 <div class="cert-item">
                     <div class="cert-img-wrapper">
                         <img src="cert-1.png" alt="RecyClass Certificate">
@@ -65,7 +65,8 @@
                     <h3 data-i18n="c1_title">RecyClass Recycling Process</h3>
                     <p data-i18n="c1_desc">Certified traceability of recycled plastics and conformity assessment for recycling processes.</p>
                 </div>
-                <!-- 2. ATIK İTHALATÇISI -->
+
+                <!-- 2. ATIK İTHALATÇISI (Orta Üst) -->
                 <div class="cert-item">
                     <div class="cert-img-wrapper">
                         <img src="cert-2.png" alt="Waste Importer Certificate">
@@ -74,7 +75,18 @@
                     <h3 data-i18n="c2_title">Waste Importer Registration</h3>
                     <p data-i18n="c2_desc">Official authorization for waste importation issued by the Ministry of Environment, Urbanization and Climate Change.</p>
                 </div>
-                <!-- 3. SANAYİ SİCİL -->
+
+                <!-- 3. ISO 9001 (Sağ Üst) -->
+                <div class="cert-item">
+                    <div class="cert-img-wrapper">
+                        <img src="cert-5.svg" alt="ISO 9001 Quality Management">
+                        <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <h3 data-i18n="c5_title">ISO 9001:2015 Quality Management</h3>
+                    <p data-i18n="c5_desc">International standard confirming our commitment to consistent quality and customer satisfaction in recycling processes.</p>
+                </div>
+
+                <!-- 4. SANAYİ SİCİL (Sol Alt) -->
                 <div class="cert-item">
                     <div class="cert-img-wrapper">
                         <img src="cert-3.png" alt="Industrial Registry Certificate">
@@ -83,7 +95,8 @@
                     <h3 data-i18n="c3_title">Industrial Registry Certificate</h3>
                     <p data-i18n="c3_desc">Official manufacturing registration issued by the Republic of Turkey Ministry of Industry and Technology.</p>
                 </div>
-                <!-- 4. GEÇİCİ FAALİYET -->
+
+                <!-- 5. GEÇİCİ FAALİYET (Orta Alt) -->
                 <div class="cert-item">
                     <div class="cert-img-wrapper">
                         <img src="cert-4.png" alt="Temporary Activity Certificate">
@@ -92,25 +105,15 @@
                     <h3 data-i18n="c4_title">Temporary Activity Certificate</h3>
                     <p data-i18n="c4_desc">Environmental permit regarding non-hazardous waste recovery and air emission.</p>
                 </div>
-                
-                <!-- 5. YENİ SVG SERTİFİKA -->
-                <div class="cert-item">
-                    <div class="cert-img-wrapper">
-                        <img src="cert-5.svg" alt="New Certificate 1">
-                        <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-                    </div>
-                    <h3 data-i18n="c5_title">New Certificate 1</h3>
-                    <p data-i18n="c5_desc">Description for the new certificate goes here.</p>
-                </div>
 
-                <!-- 6. YENİ SVG SERTİFİKA -->
+                <!-- 6. ISO 14001 (Sağ Alt) -->
                 <div class="cert-item">
                     <div class="cert-img-wrapper">
-                        <img src="cert-6.svg" alt="New Certificate 2">
+                        <img src="cert-6.svg" alt="ISO 14001 Environmental Management">
                         <div class="cert-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                     </div>
-                    <h3 data-i18n="c6_title">New Certificate 2</h3>
-                    <p data-i18n="c6_desc">Description for the new certificate goes here.</p>
+                    <h3 data-i18n="c6_title">ISO 14001:2015 Environmental Management</h3>
+                    <p data-i18n="c6_desc">Certification of our effective environmental management system, minimizing ecological impact and ensuring regulatory compliance.</p>
                 </div>
 
             </div>
@@ -132,7 +135,6 @@
                     <input type="text" name="name" data-i18n-placeholder="ph_name" placeholder="Your Name" required>
                     <input type="email" name="email" data-i18n-placeholder="ph_email" placeholder="Your Email" required>
                     <textarea name="message" data-i18n-placeholder="ph_message" placeholder="Your Message" rows="4" required></textarea>
-                    
                     <button type="submit" class="btn-green" data-i18n="btn_send">Send Message</button>
                 </form>
             </div>
@@ -178,11 +180,10 @@
                 c3_desc: "Official manufacturing registration issued by the Republic of Turkey Ministry of Industry and Technology.",
                 c4_title: "Temporary Activity Certificate",
                 c4_desc: "Environmental permit regarding non-hazardous waste recovery and air emission.",
-                /* YENİ SVG SERTİFİKALAR */
-                c5_title: "New Certificate 1",
-                c5_desc: "Description regarding the new certified standard or document.",
-                c6_title: "New Certificate 2",
-                c6_desc: "Description regarding the new certified standard or document.",
+                c5_title: "ISO 9001:2015 Quality Management",
+                c5_desc: "International standard confirming our commitment to consistent quality and customer satisfaction in recycling processes.",
+                c6_title: "ISO 14001:2015 Environmental Management",
+                c6_desc: "Certification of our effective environmental management system, minimizing ecological impact and ensuring regulatory compliance.",
                 footer_send_msg: "Send Message",
                 footer_addr: "Address",
                 footer_contact: "Contact",
@@ -213,11 +214,10 @@
                 c3_desc: "T.C. Sanayi ve Teknoloji Bakanlığı tarafından verilen resmi üretim kayıt belgesi.",
                 c4_title: "Geçici Faaliyet Belgesi",
                 c4_desc: "Tehlikesiz atık geri kazanımı ve hava emisyonu konulu çevre izin belgesi.",
-                /* YENİ SVG SERTİFİKALAR */
-                c5_title: "Yeni Sertifika 1",
-                c5_desc: "Yeni sertifika veya standart ile ilgili açıklama buraya gelecek.",
-                c6_title: "Yeni Sertifika 2",
-                c6_desc: "Yeni sertifika veya standart ile ilgili açıklama buraya gelecek.",
+                c5_title: "ISO 9001:2015 Kalite Yönetim Sistemi",
+                c5_desc: "Geri dönüşüm süreçlerinde tutarlı kalite ve müşteri memnuniyetine olan bağlılığımızı onaylayan uluslararası standart.",
+                c6_title: "ISO 14001:2015 Çevre Yönetim Sistemi",
+                c6_desc: "Ekolojik etkiyi en aza indiren ve yasal uyumluluğu sağlayan etkin çevre yönetim sistemimizin tescili.",
                 footer_send_msg: "Mesaj Gönder",
                 footer_addr: "Adres",
                 footer_contact: "İletişim",
