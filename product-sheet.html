@@ -140,6 +140,20 @@
     </footer>
 
     <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuIcon.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
         const translations = {
             en: {
                 nav_home: "Home",
@@ -151,7 +165,6 @@
                 nav_contact: "Contact",
                 ps_header_title: "PET Sheet",
                 ps_header_desc: "High quality industrial sheets",
-                /* YENİ EKLENEN METİNLER (İNGİLİZCE) */
                 ps_main_text: "We are extruding transparent rPET sheet and in various colours. By a complete control of raw material processes, we are minimizing the risks of typical rPET sheet production such as black dots and providing clear sheet and high transparency.",
                 tbl_uses: "Uses",
                 val_uses: "Thermoforming / Form, fill & seal / Lamination / Metallization",
@@ -169,7 +182,6 @@
                 val_denest: "Surface silicon, internal master batch upon request",
                 tbl_cert: "Certification",
                 val_cert: "BRC IOP",
-                /* FOOTER */
                 footer_send_msg: "Send Message",
                 footer_addr: "Address",
                 footer_contact: "Contact",
@@ -190,7 +202,6 @@
                 nav_contact: "İletişim",
                 ps_header_title: "PET Levha",
                 ps_header_desc: "Yüksek kaliteli endüstriyel levhalar",
-                /* YENİ EKLENEN METİNLER (TÜRKÇE) */
                 ps_main_text: "Şeffaf ve çeşitli renklerde rPET levha ekstrüzyonu yapmaktayız. Hammadde süreçlerinin tam kontrolü ile, siyah nokta gibi tipik rPET levha üretim risklerini en aza indiriyor, temiz levha ve yüksek şeffaflık sağlıyoruz.",
                 tbl_uses: "Kullanım Alanları",
                 val_uses: "Termoform / Form, dolum & kapama / Laminasyon / Metalizasyon",
@@ -208,7 +219,6 @@
                 val_denest: "Yüzey silikon, isteğe bağlı dahili master batch",
                 tbl_cert: "Sertifikasyon",
                 val_cert: "BRC IOP",
-                /* FOOTER */
                 footer_send_msg: "Mesaj Gönder",
                 footer_addr: "Adres",
                 footer_contact: "İletişim",
