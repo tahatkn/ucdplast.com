@@ -406,9 +406,27 @@ a {
     background-color: #f8f9fa; 
 }
 
+.cert-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.cert-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    font-weight: 800;
+}
+
+.cert-intro p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
 .cert-grid { 
     display: grid; 
-    grid-template-columns: 1fr; /* Mobil: 1 Sütun */
+    grid-template-columns: 1fr; 
     gap: 40px; 
 }
 
@@ -419,7 +437,7 @@ a {
     }
 }
 
-/* Masaüstü: 3 Sütun (3-3 düzeni için) */
+/* Masaüstü: 3 Sütun */
 @media (min-width: 1024px) {
     .cert-grid { 
         grid-template-columns: repeat(3, 1fr); 
