@@ -1017,3 +1017,85 @@ a {
         font-size: 0.9rem;
     }
 }
+
+/* --- COOKIE BANNER (ÇEREZ UYARISI) --- */
+.cookie-banner {
+    position: fixed;
+    bottom: -100%; /* Başlangıçta gizli */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    z-index: 10000;
+    transition: bottom 0.5s ease-in-out;
+    border-top: 4px solid #8ce655;
+}
+
+.cookie-banner.show {
+    bottom: 0;
+}
+
+.cookie-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cookie-text p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0 !important;
+    max-width: 800px;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.btn-cookie-accept {
+    background-color: #8ce655;
+    color: #000;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-cookie-accept:hover {
+    transform: scale(1.05);
+}
+
+.btn-cookie-decline {
+    background-color: transparent;
+    color: #666;
+    border: 2px solid #ddd;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-cookie-decline:hover {
+    border-color: #666;
+    color: #000;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cookie-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -2,14 +2,9 @@
 <html lang="en">
 <head>
     <!-- Google Analytics Kodu Başlangıç -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q0N3ZCDYL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-6Q0N3ZCDYL');
-    </script>
+    <script src="cookies.js"></script>
+    </body>
+    </html>
     <!-- Google Analytics Kodu Bitiş -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -257,6 +252,10 @@
         function changeLanguage(lang) {
             localStorage.setItem('selectedLang', lang);
             updatePageContent(lang);
+            
+            if (typeof updateCookieLanguage === 'function') {
+                updateCookieLanguage();
+            }
         }
 
         function updatePageContent(lang) {
