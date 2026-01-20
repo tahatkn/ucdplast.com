@@ -67,6 +67,39 @@ a {
     color: #8ce655; 
 }
 
+/* --- YENİ LOGO ALANI DÜZENİ --- */
+
+/* 1. Kapsayıcı Alan: Sertifikaları ve Logoyu yan yana tutar */
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Sertifikalar ile Logo arasındaki boşluk */
+}
+
+/* 2. Sertifika Yığını: İkonları alt alta dizer */
+.cert-stack {
+    display: flex;
+    flex-direction: column; /* Alt alta dizme komutu */
+    justify-content: center;
+    gap: 4px; /* İki küçük sertifika arasındaki dikey boşluk */
+}
+
+/* 3. Sertifika Boyutlandırma */
+.cert-stack img {
+    height: 22px; /* Ana logo 50px olduğu için, bunları yaklaşık yarısı kadar yapıyoruz */
+    width: auto;
+    display: block;
+    opacity: 0.9; /* Hafif şeffaflık (isteğe bağlı, daha şık durabilir) */
+}
+
+/* Mobil Uyumluluk: Mobilde alan dar olduğu için sertifikaları gizlemek isteyebilirsiniz. 
+   Eğer mobilde de görünsün isterseniz aşağıdaki kodu eklemeyin. */
+@media (max-width: 768px) {
+    .cert-stack {
+        display: none; 
+    }
+}
+
 /* Dropdown Menu */
 .dropdown { 
     position: relative; 
