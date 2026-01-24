@@ -686,7 +686,7 @@ a {
 }
 
 .product-grid-triple img:hover { 
-    transform: scale(1.05); 
+    transform: scale(1.375); 
 }
 
 /* 4'lü Grid (Sheet için) */
